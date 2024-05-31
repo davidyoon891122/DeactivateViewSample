@@ -31,7 +31,10 @@ final class DeactiveImageCell: UITableViewCell {
             }
         
         self.deactiveImageView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.height.width.equalTo(124).priority(.high)
+            $0.top.equalToSuperview().offset(32)
+            $0.bottom.equalToSuperview().offset(-32)
+            $0.leading.trailing.equalToSuperview()
         }
         
         return view
@@ -58,8 +61,8 @@ private extension DeactiveImageCell {
         self.contentView.addSubview(self.containerView)
         
         self.containerView.snp.makeConstraints {
-            $0.height.width.equalTo(124)
-            $0.edges.equalToSuperview()
+            $0.top.bottom.equalToSuperview()
+            $0.leading.trailing.equalToSuperview()
         }
     }
     
