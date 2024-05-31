@@ -19,6 +19,7 @@
 		AD736EBA2C09A4E700793F09 /* Extension+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD736EB92C09A4E600793F09 /* Extension+UIButton.swift */; };
 		AD736EBC2C09A67F00793F09 /* ViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD736EBB2C09A67F00793F09 /* ViewItem.swift */; };
 		AD736EBF2C09A8DB00793F09 /* Combine+WithLatestFrom.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD736EBE2C09A8DB00793F09 /* Combine+WithLatestFrom.swift */; };
+		AD736EC12C09AF1500793F09 /* DeactiveImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD736EC02C09AF1500793F09 /* DeactiveImageCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		AD736EB92C09A4E600793F09 /* Extension+UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIButton.swift"; sourceTree = "<group>"; };
 		AD736EBB2C09A67F00793F09 /* ViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewItem.swift; sourceTree = "<group>"; };
 		AD736EBE2C09A8DB00793F09 /* Combine+WithLatestFrom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Combine+WithLatestFrom.swift"; sourceTree = "<group>"; };
+		AD736EC02C09AF1500793F09 /* DeactiveImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeactiveImageCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				AD736EAB2C0999F500793F09 /* DeactivateViewController.swift */,
 				AD736EB02C099A2E00793F09 /* DeactivateViewModel.swift */,
 				AD736EB32C099A7400793F09 /* DeactivateNavigator.swift */,
+				AD736EC02C09AF1500793F09 /* DeactiveImageCell.swift */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD736EC12C09AF1500793F09 /* DeactiveImageCell.swift in Sources */,
 				AD736EB42C099A7400793F09 /* DeactivateNavigator.swift in Sources */,
 				AD736E982C09999E00793F09 /* AppDelegate.swift in Sources */,
 				AD736EBC2C09A67F00793F09 /* ViewItem.swift in Sources */,
