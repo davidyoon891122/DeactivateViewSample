@@ -15,6 +15,8 @@
 		AD736EAF2C099A1100793F09 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = AD736EAE2C099A1100793F09 /* SnapKit */; };
 		AD736EB12C099A2E00793F09 /* DeactivateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD736EB02C099A2E00793F09 /* DeactivateViewModel.swift */; };
 		AD736EB42C099A7400793F09 /* DeactivateNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD736EB32C099A7400793F09 /* DeactivateNavigator.swift */; };
+		AD736EB82C09A30500793F09 /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = AD736EB72C09A30500793F09 /* CombineCocoa */; };
+		AD736EBA2C09A4E700793F09 /* Extension+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD736EB92C09A4E600793F09 /* Extension+UIButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,7 @@
 		AD736EAB2C0999F500793F09 /* DeactivateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeactivateViewController.swift; sourceTree = "<group>"; };
 		AD736EB02C099A2E00793F09 /* DeactivateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeactivateViewModel.swift; sourceTree = "<group>"; };
 		AD736EB32C099A7400793F09 /* DeactivateNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeactivateNavigator.swift; sourceTree = "<group>"; };
+		AD736EB92C09A4E600793F09 /* Extension+UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIButton.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD736EB82C09A30500793F09 /* CombineCocoa in Frameworks */,
 				AD736EAF2C099A1100793F09 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -65,6 +69,7 @@
 				AD736EA22C0999A000793F09 /* LaunchScreen.storyboard */,
 				AD736EA52C0999A000793F09 /* Info.plist */,
 				AD736EB52C099B1900793F09 /* Scene */,
+				AD736EB92C09A4E600793F09 /* Extension+UIButton.swift */,
 			);
 			path = DeactivateViewSample;
 			sourceTree = "<group>";
@@ -106,6 +111,7 @@
 			name = DeactivateViewSample;
 			packageProductDependencies = (
 				AD736EAE2C099A1100793F09 /* SnapKit */,
+				AD736EB72C09A30500793F09 /* CombineCocoa */,
 			);
 			productName = DeactivateViewSample;
 			productReference = AD736E942C09999E00793F09 /* DeactivateViewSample.app */;
@@ -137,6 +143,7 @@
 			mainGroup = AD736E8B2C09999E00793F09;
 			packageReferences = (
 				AD736EAD2C099A1100793F09 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				AD736EB62C09A30500793F09 /* XCRemoteSwiftPackageReference "CombineCocoa" */,
 			);
 			productRefGroup = AD736E952C09999E00793F09 /* Products */;
 			projectDirPath = "";
@@ -169,6 +176,7 @@
 				AD736EB12C099A2E00793F09 /* DeactivateViewModel.swift in Sources */,
 				AD736EAC2C0999F500793F09 /* DeactivateViewController.swift in Sources */,
 				AD736E9A2C09999E00793F09 /* SceneDelegate.swift in Sources */,
+				AD736EBA2C09A4E700793F09 /* Extension+UIButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,6 +401,14 @@
 				minimumVersion = 5.7.1;
 			};
 		};
+		AD736EB62C09A30500793F09 /* XCRemoteSwiftPackageReference "CombineCocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/CombineCommunity/CombineCocoa.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -400,6 +416,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AD736EAD2C099A1100793F09 /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		AD736EB72C09A30500793F09 /* CombineCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AD736EB62C09A30500793F09 /* XCRemoteSwiftPackageReference "CombineCocoa" */;
+			productName = CombineCocoa;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

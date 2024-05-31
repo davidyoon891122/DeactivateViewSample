@@ -29,6 +29,29 @@ final class DeactivateViewController: UIViewController {
         return segmentControl
     }()
     
+    private lazy var tableView: UITableView = {
+        let tableView = UITableView()
+        tableView.rowHeight = UITableView.automaticDimension
+        tableView.estimatedRowHeight = 400
+        
+        return tableView
+    }()
+    
+    private lazy var deactivateButton: UIButton = {
+        let button = UIButton(type: .roundedRect)
+        button.setTitle("탈퇴하기", for: .normal)
+        button.isEnabled = false
+        button.titleLabel?.font = .boldSystemFont(ofSize: 18)
+        
+        button.setTitleColor(.white, for: .normal)
+        button.setTitleColor(.black, for: .disabled)
+        
+        button.setBackgroundColor(color: .lightGray, forState: .disabled)
+        button.setBackgroundColor(color: .black, forState: .normal)
+        
+        return button
+    }()
+    
     init(viewModel: DeactivateViewModel) {
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
@@ -53,7 +76,9 @@ private extension DeactivateViewController {
         self.view.backgroundColor = .systemBackground
         
         [
-            self.stateSegmentControl
+            self.stateSegmentControl,
+            self.tableView,
+            self.deactivateButton
         ]
             .forEach {
                 self.view.addSubview($0)
@@ -62,6 +87,20 @@ private extension DeactivateViewController {
         self.stateSegmentControl.snp.makeConstraints {
             $0.top.equalTo(self.view.safeAreaLayoutGuide).offset(4)
             $0.trailing.equalToSuperview().offset(-16)
+        }
+        
+        self.tableView.snp.makeConstraints {
+            $0.top.equalTo(self.stateSegmentControl.snp.bottom)
+            $0.leading.equalToSuperview()
+            $0.trailing.equalToSuperview()
+            $0.bottom.equalTo(self.deactivateButton.snp.top).offset(-5)
+        }
+        
+        self.deactivateButton.snp.makeConstraints {
+            $0.leading.equalToSuperview().offset(20)
+            $0.trailing.equalToSuperview().offset(-20)
+            $0.bottom.equalToSuperview().offset(-40)
+            $0.height.equalTo(56)
         }
     }
     
