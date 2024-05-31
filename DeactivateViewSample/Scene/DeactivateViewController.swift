@@ -6,8 +6,9 @@
 //
 
 import UIKit
-import SnapKit
 import Combine
+import SnapKit
+import CombineCocoa
 
 enum ViewPage: String, CaseIterable {
     case enable = "Enable"
@@ -50,6 +51,23 @@ final class DeactivateViewController: UIViewController {
         button.setBackgroundColor(color: .black, forState: .normal)
         
         return button
+    }()
+    
+    private lazy var dataSource: UITableViewDiffableDataSource<Int, ViewItem> = {
+        .init(tableView: self.tableView) { tableView, indexPath, item in
+            switch item {
+            case .image(let item):
+                print("item")
+                
+                return UITableViewCell()
+            case .title(let item):
+                print("item")
+                return UITableViewCell()
+            case .description(let items):
+                print("item")
+                return UITableViewCell()
+            }
+        }
     }()
     
     init(viewModel: DeactivateViewModel) {
@@ -106,12 +124,20 @@ private extension DeactivateViewController {
     
     func bindViewModel() {
         let viewDidLoadPublisher = self.viewDidLoadPublisher.eraseToAnyPublisher()
+        let segmentPublisher = self.stateSegmentControl.selectedSegmentIndexPublisher.eraseToAnyPublisher()
         
-        let outputs = self.viewModel.bind(.init(viewDidLoad: viewDidLoadPublisher))
+        let outputs = self.viewModel.bind(.init(
+            viewDidLoad: viewDidLoadPublisher,
+            segmentSelected: segmentPublisher
+        ))
         
         [
             outputs.events
-                .sink(receiveValue: { _ in })
+                .sink(receiveValue: { _ in }),
+            outputs.items
+                .sink(receiveValue: { item in
+                    
+                })
         ].forEach {
             self.cancellables.insert($0)
         }

@@ -17,6 +17,8 @@
 		AD736EB42C099A7400793F09 /* DeactivateNavigator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD736EB32C099A7400793F09 /* DeactivateNavigator.swift */; };
 		AD736EB82C09A30500793F09 /* CombineCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = AD736EB72C09A30500793F09 /* CombineCocoa */; };
 		AD736EBA2C09A4E700793F09 /* Extension+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD736EB92C09A4E600793F09 /* Extension+UIButton.swift */; };
+		AD736EBC2C09A67F00793F09 /* ViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD736EBB2C09A67F00793F09 /* ViewItem.swift */; };
+		AD736EBF2C09A8DB00793F09 /* Combine+WithLatestFrom.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD736EBE2C09A8DB00793F09 /* Combine+WithLatestFrom.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		AD736EB02C099A2E00793F09 /* DeactivateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeactivateViewModel.swift; sourceTree = "<group>"; };
 		AD736EB32C099A7400793F09 /* DeactivateNavigator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeactivateNavigator.swift; sourceTree = "<group>"; };
 		AD736EB92C09A4E600793F09 /* Extension+UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIButton.swift"; sourceTree = "<group>"; };
+		AD736EBB2C09A67F00793F09 /* ViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewItem.swift; sourceTree = "<group>"; };
+		AD736EBE2C09A8DB00793F09 /* Combine+WithLatestFrom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Combine+WithLatestFrom.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +74,7 @@
 				AD736EA52C0999A000793F09 /* Info.plist */,
 				AD736EB52C099B1900793F09 /* Scene */,
 				AD736EB92C09A4E600793F09 /* Extension+UIButton.swift */,
+				AD736EBE2C09A8DB00793F09 /* Combine+WithLatestFrom.swift */,
 			);
 			path = DeactivateViewSample;
 			sourceTree = "<group>";
@@ -86,11 +91,20 @@
 		AD736EB52C099B1900793F09 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				AD736EBD2C09A68300793F09 /* Model */,
 				AD736EAB2C0999F500793F09 /* DeactivateViewController.swift */,
 				AD736EB02C099A2E00793F09 /* DeactivateViewModel.swift */,
 				AD736EB32C099A7400793F09 /* DeactivateNavigator.swift */,
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		AD736EBD2C09A68300793F09 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AD736EBB2C09A67F00793F09 /* ViewItem.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,7 +187,9 @@
 			files = (
 				AD736EB42C099A7400793F09 /* DeactivateNavigator.swift in Sources */,
 				AD736E982C09999E00793F09 /* AppDelegate.swift in Sources */,
+				AD736EBC2C09A67F00793F09 /* ViewItem.swift in Sources */,
 				AD736EB12C099A2E00793F09 /* DeactivateViewModel.swift in Sources */,
+				AD736EBF2C09A8DB00793F09 /* Combine+WithLatestFrom.swift in Sources */,
 				AD736EAC2C0999F500793F09 /* DeactivateViewController.swift in Sources */,
 				AD736E9A2C09999E00793F09 /* SceneDelegate.swift in Sources */,
 				AD736EBA2C09A4E700793F09 /* Extension+UIButton.swift in Sources */,
