@@ -35,6 +35,10 @@ final class DeactivateViewController: UIViewController {
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 400
         
+        tableView.register(DeactiveImageCell.self, forCellReuseIdentifier: DeactiveImageCell.identifier)
+        tableView.register(DeactiveTitleCell.self, forCellReuseIdentifier: DeactiveTitleCell.identifier)
+        tableView.register(DeactiveDescriptionCell.self, forCellReuseIdentifier: DeactiveDescriptionCell.identifier)
+        
         return tableView
     }()
     
@@ -54,18 +58,29 @@ final class DeactivateViewController: UIViewController {
     }()
     
     private lazy var dataSource: UITableViewDiffableDataSource<Int, ViewItem> = {
-        .init(tableView: self.tableView) { tableView, indexPath, item in
-            switch item {
+        .init(tableView: self.tableView) { tableView, indexPath, items in
+            switch items {
             case .image(let item):
-                print("item")
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: DeactiveImageCell.identifier) as? DeactiveImageCell else { 
+                    print("여기 체크")
+                    return UITableViewCell()
+                }
                 
-                return UITableViewCell()
+                cell.setupCell(viewItem: item)
+                
+                return cell
             case .title(let item):
-                print("item")
-                return UITableViewCell()
-            case .description(let items):
-                print("item")
-                return UITableViewCell()
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: DeactiveTitleCell.identifier) as? DeactiveTitleCell else { return UITableViewCell() }
+                
+                cell.setupCell(viewItem: item)
+                
+                return cell
+            case .description(let item):
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: DeactiveDescriptionCell.identifier) as? DeactiveDescriptionCell else { return UITableViewCell() }
+                
+                cell.setupCell(viewItem: item)
+                
+                return cell
             }
         }
     }()
@@ -135,12 +150,19 @@ private extension DeactivateViewController {
             outputs.events
                 .sink(receiveValue: { _ in }),
             outputs.items
-                .sink(receiveValue: { item in
-                    
+                .sink(receiveValue: { [weak self] item in
+                    self?.applySnapshot(data: item)
                 })
         ].forEach {
             self.cancellables.insert($0)
         }
+    }
+    
+    func applySnapshot(data: [ViewItem]) {
+        var snapshot = NSDiffableDataSourceSnapshot<Int, ViewItem>()
+        snapshot.appendSections([0])
+        snapshot.appendItems(data)
+        self.dataSource.apply(snapshot, animatingDifferences: false)
     }
     
 }

@@ -1,5 +1,5 @@
 //
-//  DeactiveTitleCell.swift
+//  DeactiveImageCell.swift
 //  DeactivateViewSample
 //
 //  Created by Davidyoon on 5/31/24.
@@ -8,37 +8,35 @@
 import UIKit
 import SnapKit
 
-final class DeactiveTitleCell: UITableViewCell {
+final class DeactiveImageCell: UITableViewCell {
     
     static let identifier = String(describing: DeactiveImageCell.self)
     
-    private lazy var titleLabel: UILabel = {
-        let label = UILabel()
-        label.text = "1\n2\n3"
-        label.font = .boldSystemFont(ofSize: 24)
-        label.textColor = .label
-        label.numberOfLines = 0
+    private lazy var deactiveImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = UIImage(systemName: "person.circle")
         
-        return label
+        return imageView
     }()
     
     private lazy var containerView: UIView = {
         let view = UIView()
         
         [
-            self.titleLabel
+            self.deactiveImageView
         ]
             .forEach {
                 view.addSubview($0)
             }
         
-        self.titleLabel.snp.makeConstraints {
+        self.deactiveImageView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
         
         return view
     }()
-    
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.setupViews()
@@ -48,25 +46,25 @@ final class DeactiveTitleCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func setupCell(viewItem: TitleViewItem) {
-        self.titleLabel.text = viewItem.title
+    func setupCell(viewItem: ImageViewItem) {
+        self.deactiveImageView.image = viewItem.image
     }
     
 }
 
-private extension DeactiveTitleCell {
+private extension DeactiveImageCell {
     
     func setupViews() {
         self.contentView.addSubview(self.containerView)
         
         self.containerView.snp.makeConstraints {
+            $0.height.width.equalTo(124)
             $0.edges.equalToSuperview()
-            $0.height.equalTo(64)
         }
     }
     
 }
 
 #Preview {
-    DeactiveTitleCell()
+    DeactiveImageCell()
 }

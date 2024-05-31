@@ -51,7 +51,7 @@ struct SampleItem {
 enum ViewItem: Hashable {
     case image(ImageViewItem)
     case title(TitleViewItem)
-    case description([DescriptionViewItem])
+    case description(DescriptionViewItem)
 }
 
 struct ImageViewItem: Hashable {

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "194DE536-B3FB-43FD-98DB-6C23D6F59B68"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ADAF8372-3AAD-4138-BA59-56BD924FF1D0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DeactivateViewSample/Scene/DeactivateViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "69"
+            endingLineNumber = "69"
+            landmarkName = "DeactivateViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F87FD43F-DB80-4ADA-A1D8-AA8DFDE5295F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DeactivateViewSample/Scene/Cell/DeactiveImageCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "setupCell(viewItem:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3304AFCF-6461-4DB0-9ED5-52EF5B793007"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DeactivateViewSample/Scene/Cell/DeactiveImageCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "init(style:reuseIdentifier:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6D6E3757-B4D5-45A1-9534-E9D5A91EDD0C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DeactivateViewSample/Scene/DeactivateViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "DeactivateViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4AD6DA36-197E-4B59-B0B3-A3D65EBA90E4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DeactivateViewSample/Scene/DeactivateViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "DeactivateViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "4AD6DA36-197E-4B59-B0B3-A3D65EBA90E4 - dc3350ae91799466"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.UITableView, Foundation.IndexPath, DeactivateViewSample.ViewItem) -&gt; Swift.Optional&lt;__C.UITableViewCell&gt; in closure #1 () -&gt; UIKit.UITableViewDiffableDataSource&lt;Swift.Int, DeactivateViewSample.ViewItem&gt; in DeactivateViewSample.DeactivateViewController.dataSource.getter : UIKit.UITableViewDiffableDataSource&lt;Swift.Int, DeactivateViewSample.ViewItem&gt;"
+                  moduleName = "DeactivateViewSample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidyoon/iOSProject/DeactivateViewSample/DeactivateViewSample/Scene/DeactivateViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "116">
+               </Location>
+               <Location
+                  uuid = "4AD6DA36-197E-4B59-B0B3-A3D65EBA90E4 - dc3350ae91799466"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.UITableView, Foundation.IndexPath, DeactivateViewSample.ViewItem) -&gt; Swift.Optional&lt;__C.UITableViewCell&gt; in closure #1 () -&gt; UIKit.UITableViewDiffableDataSource&lt;Swift.Int, DeactivateViewSample.ViewItem&gt; in DeactivateViewSample.DeactivateViewController.dataSource.getter : UIKit.UITableViewDiffableDataSource&lt;Swift.Int, DeactivateViewSample.ViewItem&gt;"
+                  moduleName = "DeactivateViewSample"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/davidyoon/iOSProject/DeactivateViewSample/DeactivateViewSample/Scene/DeactivateViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "63"
+                  endingLineNumber = "63"
+                  offsetFromSymbolStart = "216">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "59265234-E134-4662-B22C-7D5F3821AA46"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DeactivateViewSample/Scene/DeactivateViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
+            landmarkName = "applySnapshot(data:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
