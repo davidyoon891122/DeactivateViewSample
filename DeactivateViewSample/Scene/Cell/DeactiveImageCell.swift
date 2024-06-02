@@ -58,6 +58,7 @@ final class DeactiveImageCell: UITableViewCell {
 private extension DeactiveImageCell {
     
     func setupViews() {
+        self.selectionStyle = .none
         self.contentView.addSubview(self.containerView)
         
         self.containerView.snp.makeConstraints {

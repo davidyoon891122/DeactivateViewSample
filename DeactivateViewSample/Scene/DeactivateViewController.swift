@@ -39,6 +39,8 @@ final class DeactivateViewController: UIViewController {
         tableView.register(DeactiveTitleCell.self, forCellReuseIdentifier: DeactiveTitleCell.identifier)
         tableView.register(DeactiveDescriptionCell.self, forCellReuseIdentifier: DeactiveDescriptionCell.identifier)
         
+        tableView.separatorStyle = .none
+        
         return tableView
     }()
     
@@ -61,10 +63,7 @@ final class DeactivateViewController: UIViewController {
         .init(tableView: self.tableView) { tableView, indexPath, items in
             switch items {
             case .image(let item):
-                guard let cell = tableView.dequeueReusableCell(withIdentifier: DeactiveImageCell.identifier) as? DeactiveImageCell else { 
-                    print("여기 체크")
-                    return UITableViewCell()
-                }
+                guard let cell = tableView.dequeueReusableCell(withIdentifier: DeactiveImageCell.identifier) as? DeactiveImageCell else { return UITableViewCell() }
                 
                 cell.setupCell(viewItem: item)
                 

@@ -60,6 +60,7 @@ final class DeactiveTitleCell: UITableViewCell {
 private extension DeactiveTitleCell {
     
     func setupViews() {
+        self.selectionStyle = .none
         self.contentView.addSubview(self.containerView)
         
         self.containerView.snp.makeConstraints {

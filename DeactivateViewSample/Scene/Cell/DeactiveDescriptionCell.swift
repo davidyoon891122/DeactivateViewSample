@@ -76,6 +76,7 @@ final class DeactiveDescriptionCell: UITableViewCell {
 private extension DeactiveDescriptionCell {
     
     func setupViews() {
+        self.selectionStyle = .none
         self.contentView.addSubview(self.containerView)
         
         self.containerView.snp.makeConstraints {
