@@ -55,6 +55,11 @@ final class DeactiveTitleCell: UITableViewCell {
         self.titleLabel.text = viewItem.title
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.reset()
+    }
+    
 }
 
 private extension DeactiveTitleCell {
@@ -66,6 +71,10 @@ private extension DeactiveTitleCell {
         self.containerView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
+    }
+    
+    func reset() {
+        self.titleLabel.text = nil
     }
     
 }

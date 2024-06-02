@@ -53,6 +53,11 @@ final class DeactiveImageCell: UITableViewCell {
         self.deactiveImageView.image = viewItem.image
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.reset()
+    }
+    
 }
 
 private extension DeactiveImageCell {
@@ -65,6 +70,10 @@ private extension DeactiveImageCell {
             $0.top.bottom.equalToSuperview()
             $0.leading.trailing.equalToSuperview()
         }
+    }
+    
+    func reset() {
+        self.deactiveImageView.image = nil
     }
     
 }

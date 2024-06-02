@@ -71,6 +71,11 @@ final class DeactiveDescriptionCell: UITableViewCell {
         self.descriptionLabel.text = viewItem.description
     }
     
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.reset()
+    }
+    
 }
 
 private extension DeactiveDescriptionCell {
@@ -82,6 +87,10 @@ private extension DeactiveDescriptionCell {
         self.containerView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
+    }
+    
+    func reset() {
+        self.descriptionLabel.text = nil
     }
     
 }
