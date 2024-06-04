@@ -17,6 +17,7 @@ struct DeactivateViewModel {
     
     struct Outputs {
         let items: AnyPublisher<[ViewItem], Never>
+        let buttonEnabled: AnyPublisher<Bool, Never>
         let events: AnyPublisher<Void, Never>
     }
     
@@ -27,6 +28,7 @@ extension DeactivateViewModel {
     func bind(_ inputs: Inputs) -> Outputs {
         
         let itemsSubject = CurrentValueSubject<[ViewItem], Never>.init(ViewItem.enableViewItem)
+        let buttonEnabledSubject: CurrentValueSubject<Bool, Never> = .init(false)
         
         let events = Publishers.MergeMany(
             inputs.viewDidLoad
@@ -39,8 +41,10 @@ extension DeactivateViewModel {
                     print("Selected: \($0)")
                     if $0 == 0 {
                         itemsSubject.send(ViewItem.enableViewItem)
+                        buttonEnabledSubject.send(true)
                     } else {
                         itemsSubject.send(ViewItem.disableViewItem)
+                        buttonEnabledSubject.send(false)
                     }
                     
                 }
@@ -49,7 +53,11 @@ extension DeactivateViewModel {
         )
             .eraseToAnyPublisher()
         
-        return .init(items: itemsSubject.eraseToAnyPublisher(), events: .init(events))
+        return .init(
+            items: itemsSubject.eraseToAnyPublisher(),
+            buttonEnabled: buttonEnabledSubject.eraseToAnyPublisher(),
+            events: .init(events)
+        )
     }
     
 }

@@ -47,7 +47,6 @@ final class DeactivateViewController: UIViewController {
     private lazy var deactivateButton: UIButton = {
         let button = UIButton(type: .roundedRect)
         button.setTitle("탈퇴하기", for: .normal)
-        button.isEnabled = false
         button.titleLabel?.font = .boldSystemFont(ofSize: 18)
         
         button.setTitleColor(.white, for: .normal)
@@ -151,7 +150,9 @@ private extension DeactivateViewController {
             outputs.items
                 .sink(receiveValue: { [weak self] item in
                     self?.applySnapshot(data: item)
-                })
+                }),
+            outputs.buttonEnabled
+                .assign(to: \.isEnabled, on: self.deactivateButton)
         ].forEach {
             self.cancellables.insert($0)
         }

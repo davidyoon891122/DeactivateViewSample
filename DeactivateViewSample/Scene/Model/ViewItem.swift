@@ -48,6 +48,18 @@ struct SampleItem {
     
 }
 
+extension SampleItem {
+    
+    var allViewItems: [ViewItem] {
+        [
+            .image(imageViewItem),
+            .title(titleViewItem)
+        ] + descriptionsViewItem.map { .description($0)}
+    }
+    
+}
+
+
 enum ViewItem: Hashable {
     case image(ImageViewItem)
     case title(TitleViewItem)
